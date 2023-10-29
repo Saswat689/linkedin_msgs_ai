@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkedinIn Automation</title>
+    <style type="text/css">
+      body {
+        min-width: 400px; /* your desired width */
+        max-width: 100%;
+        position: relative;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="start">
+      <h1>Linkedin Connection Automater</h1>
+      <p>
+        This free AI tool will automate creating personalised connection notes for
+        any profile on linkedin. Make sure that you are logged into chatGPT and on
+        linkedin profile page to continue
+      </p>
+      <form action="" style="display: flex;" id="form_name">
+        <input type="text" name="user_name" required id="user_name" style="margin-right: 10px; padding: 7px 20px;" placeholder="Enter your name" />
+        <button type="submit" id="submit_name" style="padding: 7px 20px;">Submit</button>
+      </form>
+    </div>
+
+    <div id="info" style="display: none;">
+      <h2 id="hello" style="display: none;">Hello <span id="d_name"></span> &#128075;</h2>
+      <div>
+        <button id="pause">Pause execution</button>
+        <button id="continue">Continue execution</button>
+      </div>
+      <p id="loginpopup" style="display: none;">Successfully logged in</p>
+      <div id="savedusers">
+        <p>Saved users here:</p>
+      </div>
+    </div>
+
+    <script src="./popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedinIn message automation",
+  "description": "Chrome extension for automating messages to open service profiles across any niche @singhwebdesign",
+  "version": "1.0",
+  "action": {
+    "default_popup": "./popup/popup.html",
+    "default_icon": {
+      "16": "images/icon16.jpeg",
+      "32": "images/icon32.jpeg",
+      "48": "images/icon48.jpeg",
+      "128": "images/icon128.jpeg"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/search*"],
+      "js": ["./content-scripts/linkedIn.js"]
+    },
+    {
+      "matches": ["https://*.chat.openai.com/*"],
+      "js": ["./content-scripts/chatGPT.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "scripting",
+    "storage",
+    "unlimitedStorage",
+    "webNavigation"
+  ],
+  "externally_connectable": {
+    "matches": ["*://*.linkedin.com/*"]
+  }
+}
